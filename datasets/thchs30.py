@@ -24,7 +24,9 @@ def build_from_path(in_dir, out_dir, num_workers=1, tqdm=lambda x: x):
   executor = ProcessPoolExecutor(max_workers=num_workers)
   futures = []
   index = 1
-  trn_files = glob.glob(os.path.join(in_dir, 'data', 'A2_*.trn'))
+
+  trn_files = []
+  trn_files += glob.glob(os.path.join(in_dir, 'data', 'A2_*.trn'))
   trn_files += glob.glob(os.path.join(in_dir, 'data', 'A4_*.trn'))
   trn_files += glob.glob(os.path.join(in_dir, 'data', 'A8_*.trn'))
   trn_files += glob.glob(os.path.join(in_dir, 'data', 'A11_*.trn'))
