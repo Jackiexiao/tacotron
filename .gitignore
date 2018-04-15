@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .DS_Store
 run*.sh
+king003/
+logs-king003/
+training/
